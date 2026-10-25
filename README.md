@@ -92,7 +92,7 @@
 
 ## 💻 Open-Source GitHub Projects
 
-*Active open-source platforms, dynamic form builders, headless document rendering engines, and interview assembly tools, **ranked in descending order by GitHub Stars_Count**.*
+*Active open-source platforms, dynamic form builders, headless document rendering engines, and interview assembly tools, **ranked in descending order by GitHub_Stars_Count**.*
 
 | Repository & Platform 🌐 | GitHub_Stars ⭐ | Primary Tech 💻 | Description & Key Architectural Features 📝 |
 | :--- | :--- | :--- | :--- |
@@ -160,7 +160,7 @@ Contributions from engineers, technical writers, and enterprise architects are w
 
 1. 🍴 **Fork** this repository.
 2. 🌿 **Create a new branch**: `git checkout -b feat/add-new-form-tool`
-3. ✏️ **Add your entry** adhering to the exact tabular structure, including verified specific pricing, explicit free tier limits, or GitHub Stars_Count badges.
+3. ✏️ **Add your entry** adhering to the exact tabular structure, including verified specific pricing, explicit free tier limits, or GitHub_Stars_Count badges.
 4. 🚀 **Commit & Push**: `git commit -m "Add [Tool Name] to Enterprise Form & Document Automation directory"`
 5. 📬 **Submit a Pull Request** with a brief summary of how the tool serves enterprise workloads.
 
