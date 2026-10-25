@@ -1,0 +1,201 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 380" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0e17" />
+      <stop offset="40%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#111827" />
+    </linearGradient>
+
+    <!-- Accent Gradients -->
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="35%" stop-color="#818cf8" />
+      <stop offset="70%" stop-color="#c084fc" />
+      <stop offset="100%" stop-color="#f472b6" />
+    </linearGradient>
+
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0.1" />
+    </linearGradient>
+
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.9" />
+    </linearGradient>
+
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.7" />
+      <stop offset="50%" stop-color="#818cf8" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#c084fc" stop-opacity="0.6" />
+    </linearGradient>
+
+    <!-- Filter for Glow Effects -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <!-- Tech Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.7" stroke-opacity="0.4" />
+      <circle cx="40" cy="40" r="1" fill="#38bdf8" fill-opacity="0.25" />
+    </pattern>
+  </defs>
+
+  <style>
+    @keyframes pulseAura {
+      0%, 100% { opacity: 0.25; transform: scale(1); }
+      50% { opacity: 0.55; transform: scale(1.08); }
+    }
+    @keyframes dashStream {
+      0% { stroke-dashoffset: 240; }
+      100% { stroke-dashoffset: 0; }
+    }
+    @keyframes floatCard {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-5px); }
+    }
+    @keyframes nodeBeacon {
+      0%, 100% { r: 5; fill-opacity: 0.8; }
+      50% { r: 7.5; fill-opacity: 1; filter: drop-shadow(0 0 6px #38bdf8); }
+    }
+    .stream-line {
+      stroke-dasharray: 12, 12;
+      animation: dashStream 7s linear infinite;
+    }
+    .pulsing-aura {
+      transform-origin: 600px 190px;
+      animation: pulseAura 6s ease-in-out infinite;
+    }
+    .card-float-1 {
+      animation: floatCard 4s ease-in-out infinite;
+    }
+    .card-float-2 {
+      animation: floatCard 4.6s ease-in-out infinite 0.8s;
+    }
+    .card-float-3 {
+      animation: floatCard 4.2s ease-in-out infinite 1.6s;
+    }
+    .card-float-4 {
+      animation: floatCard 4.8s ease-in-out infinite 2.4s;
+    }
+    .beacon {
+      animation: nodeBeacon 2.5s ease-in-out infinite;
+    }
+  </style>
+
+  <!-- Deep Canvas Background -->
+  <rect width="100%" height="100%" fill="url(#bgGrad)" />
+  <rect width="100%" height="100%" fill="url(#grid)" />
+
+  <!-- Ambient Glowing Nebulae -->
+  <circle cx="200" cy="120" r="220" fill="url(#glowGrad)" class="pulsing-aura" filter="url(#softGlow)" />
+  <circle cx="1000" cy="240" r="260" fill="url(#glowGrad)" class="pulsing-aura" filter="url(#softGlow)" />
+
+  <!-- Top Decorative Tech Border Line -->
+  <path d="M 0 2 L 400 2 L 440 8 L 760 8 L 800 2 L 1200 2" stroke="url(#titleGrad)" stroke-width="2.5" fill="none" opacity="0.85" />
+
+  <!-- Data Flow Stream Lines in Background (Lower Section) -->
+  <g opacity="0.6">
+    <path class="stream-line" d="M 180 300 C 320 300, 360 300, 470 300" fill="none" stroke="#38bdf8" stroke-width="2" />
+    <path class="stream-line" d="M 470 300 C 580 300, 620 300, 730 300" fill="none" stroke="#818cf8" stroke-width="2" />
+    <path class="stream-line" d="M 730 300 C 840 300, 880 300, 1020 300" fill="none" stroke="#c084fc" stroke-width="2" />
+  </g>
+
+  <!-- FOREGROUND HEADER CONTENT (Crisp, High Contrast, Guaranteed Legibility) -->
+  <g id="header-content">
+    <!-- Category Badge Pill -->
+    <g transform="translate(460, 32)">
+      <rect x="0" y="0" width="280" height="30" rx="15" fill="#1e293b" fill-opacity="0.9" stroke="url(#borderGrad)" stroke-width="1.2" />
+      <circle cx="18" cy="15" r="4" fill="#38bdf8" />
+      <text x="32" y="20" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" letter-spacing="1.2">ENTERPRISE ARCHITECTURE DIRECTORY</text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="600" y="112" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="44" font-weight="900" fill="url(#titleGrad)" letter-spacing="-0.5" filter="drop-shadow(0 4px 16px rgba(0,0,0,0.8))">
+      Awesome Enterprise Form &amp; Document Automation
+    </text>
+
+    <!-- Subtitle -->
+    <text x="600" y="152" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="18" font-weight="400" fill="#94a3b8" letter-spacing="0.3">
+      Curated Index of Open-Source Engines, Enterprise CCM Suites, Template Systems &amp; PDF Workflows
+    </text>
+
+    <!-- Feature Pillars Badges -->
+    <g transform="translate(180, 182)">
+      <!-- Pill 1 -->
+      <g transform="translate(0, 0)">
+        <rect width="180" height="32" rx="16" fill="#1e293b" fill-opacity="0.8" stroke="#38bdf8" stroke-opacity="0.4" stroke-width="1" />
+        <text x="90" y="20" text-anchor="middle" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600">⚡ Dynamic Form Intake</text>
+      </g>
+      <!-- Pill 2 -->
+      <g transform="translate(220, 0)">
+        <rect width="180" height="32" rx="16" fill="#1e293b" fill-opacity="0.8" stroke="#818cf8" stroke-opacity="0.4" stroke-width="1" />
+        <text x="90" y="20" text-anchor="middle" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600">📄 High-Volume Assembly</text>
+      </g>
+      <!-- Pill 3 -->
+      <g transform="translate(440, 0)">
+        <rect width="180" height="32" rx="16" fill="#1e293b" fill-opacity="0.8" stroke="#c084fc" stroke-opacity="0.4" stroke-width="1" />
+        <text x="90" y="20" text-anchor="middle" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600">🏢 Omnichannel CCM</text>
+      </g>
+      <!-- Pill 4 -->
+      <g transform="translate(660, 0)">
+        <rect width="180" height="32" rx="16" fill="#1e293b" fill-opacity="0.8" stroke="#f472b6" stroke-opacity="0.4" stroke-width="1" />
+        <text x="90" y="20" text-anchor="middle" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600">✍️ Compliant eSignatures</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Interactive Architecture Flow Cards (Lower Region) -->
+  <g transform="translate(0, 240)">
+    <!-- Stage 1: Form Intake -->
+    <g class="card-float-1" transform="translate(80, 0)">
+      <rect width="230" height="88" rx="12" fill="url(#cardGrad)" stroke="url(#borderGrad)" stroke-width="1.3" />
+      <circle cx="34" cy="44" r="18" fill="#0369a1" fill-opacity="0.4" />
+      <text x="34" y="50" text-anchor="middle" font-size="18">📋</text>
+      <text x="68" y="38" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700">Digital Forms</text>
+      <text x="68" y="56" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11">JSON Schemas &amp; Wizards</text>
+      <circle cx="215" cy="44" r="5" fill="#38bdf8" class="beacon" />
+    </g>
+
+    <!-- Stage 2: Template & Rule Engine -->
+    <g class="card-float-2" transform="translate(360, 0)">
+      <rect width="230" height="88" rx="12" fill="url(#cardGrad)" stroke="url(#borderGrad)" stroke-width="1.3" />
+      <circle cx="34" cy="44" r="18" fill="#4338ca" fill-opacity="0.4" />
+      <text x="34" y="50" text-anchor="middle" font-size="18">⚙️</text>
+      <text x="68" y="38" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700">Template Logic</text>
+      <text x="68" y="56" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11">Data Merge &amp; Conditionals</text>
+      <circle cx="215" cy="44" r="5" fill="#818cf8" class="beacon" />
+    </g>
+
+    <!-- Stage 3: Document Generation -->
+    <g class="card-float-3" transform="translate(640, 0)">
+      <rect width="230" height="88" rx="12" fill="url(#cardGrad)" stroke="url(#borderGrad)" stroke-width="1.3" />
+      <circle cx="34" cy="44" r="18" fill="#7e22ce" fill-opacity="0.4" />
+      <text x="34" y="50" text-anchor="middle" font-size="18">📄</text>
+      <text x="68" y="38" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700">Doc Generation</text>
+      <text x="68" y="56" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11">PDF, DOCX, XLSX Rendering</text>
+      <circle cx="215" cy="44" r="5" fill="#c084fc" class="beacon" />
+    </g>
+
+    <!-- Stage 4: Orchestration & eSign -->
+    <g class="card-float-4" transform="translate(920, 0)">
+      <rect width="230" height="88" rx="12" fill="url(#cardGrad)" stroke="url(#borderGrad)" stroke-width="1.3" />
+      <circle cx="34" cy="44" r="18" fill="#be185d" fill-opacity="0.4" />
+      <text x="34" y="50" text-anchor="middle" font-size="18">✍️</text>
+      <text x="68" y="38" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700">Approval &amp; Sign</text>
+      <text x="68" y="56" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11">Audit Trails &amp; Archival</text>
+      <circle cx="215" cy="44" r="5" fill="#f472b6" class="beacon" />
+    </g>
+  </g>
+
+  <!-- Bottom Accent Line -->
+  <path d="M 0 378 L 1200 378" stroke="url(#titleGrad)" stroke-width="2" opacity="0.6" />
+</svg>
