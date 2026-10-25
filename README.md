@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-# Awesome-Enterprise-Form-Document-Automation
-
-=======
 <div align="center">
 
 <img src="assets/banner.svg" alt="Awesome Enterprise Form & Document Automation Banner" width="100%">
@@ -202,9 +198,3 @@ Thank you for championing open, accessible, and high-performance document automa
 *Let's build frictionless forms and lightning-fast document pipelines.*
 
 </div>
->>>>>>> e137a9040eac5a5a4fe8f228fd175b928cb9850e
-Copy-Item README.md README.md.bak -Force
-# Manual step: replace SaaS and Open-Source sections with content above
-git add README.md
-git commit -m "docs: add enterprise form/document automation pricing (Formstack, airSlate, Oracle Forms licensing model) and flag open-source gap"
-git push
