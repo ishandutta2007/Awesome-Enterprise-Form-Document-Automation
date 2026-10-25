@@ -92,9 +92,9 @@
 
 ## 💻 Open-Source GitHub Projects
 
-*Active open-source platforms, dynamic form builders, headless document rendering engines, and interview assembly tools, **ranked in descending order by GitHub Star Count**.*
+*Active open-source platforms, dynamic form builders, headless document rendering engines, and interview assembly tools, **ranked in descending order by GitHub Stars_Count**.*
 
-| Repository & Platform 🌐 | GitHub Stars ⭐ | Primary Tech 💻 | Description & Key Architectural Features 📝 |
+| Repository & Platform 🌐 | GitHub_Stars ⭐ | Primary Tech 💻 | Description & Key Architectural Features 📝 |
 | :--- | :--- | :--- | :--- |
 | **[Stirling-PDF](https://github.com/Stirling-Tools/Stirling-PDF)** | [![Stars](https://img.shields.io/github/stars/Stirling-Tools/Stirling-PDF?style=social&color=white)](https://github.com/Stirling-Tools/Stirling-PDF/stargazers) | Java / TypeScript | Self-hosted, robust web-based PDF Swiss Army knife providing PDF form filling, split/merge, automated OCR, password protection, and REST API endpoints for document processing. |
 | **[Typst](https://github.com/typst/typst)** | [![Stars](https://img.shields.io/github/stars/typst/typst?style=social&color=white)](https://github.com/typst/typst/stargazers) | Rust | Next-generation markup-based typesetting system and high-performance document compiler; an extraordinarily fast, modern programmatic alternative to LaTeX for dynamic PDF generation. |
@@ -160,7 +160,7 @@ Contributions from engineers, technical writers, and enterprise architects are w
 
 1. 🍴 **Fork** this repository.
 2. 🌿 **Create a new branch**: `git checkout -b feat/add-new-form-tool`
-3. ✏️ **Add your entry** adhering to the exact tabular structure, including verified specific pricing, explicit free tier limits, or GitHub star count badges.
+3. ✏️ **Add your entry** adhering to the exact tabular structure, including verified specific pricing, explicit free tier limits, or GitHub Stars_Count badges.
 4. 🚀 **Commit & Push**: `git commit -m "Add [Tool Name] to Enterprise Form & Document Automation directory"`
 5. 📬 **Submit a Pull Request** with a brief summary of how the tool serves enterprise workloads.
 
